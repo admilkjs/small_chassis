@@ -10,7 +10,7 @@ on:
 
 permissions:
     id-token: write
-    contents: read 
+    contents: write
 
 jobs:
   deploy:
@@ -35,9 +35,15 @@ jobs:
       - name: 构建文档
         run: "pnpm docs:build"
 
-      - name: 上传并部署到Deno 
-        uses: denoland/deployctl@v1
+      # - name: 上传并部署到Deno 
+      #   uses: denoland/deployctl@v1
+      #   with:
+      #     project: "shiwuliyasmall"
+      #     entrypoint: "jsr:@std/http/file-server"
+      #     root: .vitepress/dist
+
+      - name: 上传并部署到Github Pages
+        uses: peaceiris/actions-gh-pages@v4
         with:
-          project: "shiwuliyasmall"
-          entrypoint: "jsr:@std/http/file-server"
-          root: .vitepress/dist
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: .vitepress/dist
