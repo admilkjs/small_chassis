@@ -1,4 +1,10 @@
 {
+  "name": "admilk",
+  "version": "1.0.0",
+  "license": "MIT",
+  "devDependencies": {
+    "vitepress": "^0.20.3"
+  },
   "scripts": {
     "docs:dev": "vitepress dev",
     "docs:build": "vitepress build",
