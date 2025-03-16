@@ -1,47 +1,49 @@
 name: Deploy
+
 on:
   push:
-    branches: docs
+    branches: main
   pull_request:
-    branches: docs
+    branches: main
+  workflow_dispatch:
+
+
+permissions:
+    id-token: write
+    contents: write
 
 jobs:
   deploy:
-    name: Deploy
     runs-on: ubuntu-latest
 
-    permissions:
-      id-token: write # Needed for auth with Deno Deploy
-      contents: read # Needed to clone the repository
-
     steps:
-      - name: Clone repository
+      - name: 检出当前仓库代码
         uses: actions/checkout@v4
 
-      - name: Install Deno
+      - name: 安装 Deno
         uses: denoland/setup-deno@v2
         with:
           deno-version: v2.x
 
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v2
+      - name: 安装 pnpm
+        uses: pnpm/action-setup@v4
         with:
-          version: 8
-          run_install: true
+          version: 9
+          run_install: |
+            - args: [--no-frozen-lockfile]
 
-      - name: Install Node.js
-        uses: actions/setup-node@v4
+      - name: 构建文档
+        run: "pnpm docs:build"
+
+      # - name: 上传并部署到Deno 
+      #   uses: denoland/deployctl@v1
+      #   with:
+      #     project: "shiwuliyasmall"
+      #     entrypoint: "jsr:@std/http/file-server"
+      #     root: .vitepress/dist
+
+      - name: 上传并部署到Github Pages
+        uses: peaceiris/actions-gh-pages@v4
         with:
-          node-version: 20
-          cache: pnpm
-
-      - name: Build step
-        run: "pnpm build"
-
-      - name: Upload to Deno Deploy
-        uses: denoland/deployctl@v1
-        with:
-          project: "Deno Deploy"
-          entrypoint: "https://deno.land/std@0.217.0/http/file_server.ts"
-          root: ".vitepress/dist"
-          include: .vitepress/dist
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: .vitepress/dist
