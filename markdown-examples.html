@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Markdown Extension Examples | 神金列表</title>
+    <meta name="description" content="专门用于展示各类神金之迷惑言论">
+    <link rel="stylesheet" href="/assets/style.f1a17dfc.css">
+    <link rel="modulepreload" href="/assets/framework.44a1938f.js">
+    <link rel="modulepreload" href="/assets/Debug.f2f81c5b.js">
+    <link rel="modulepreload" href="/assets/plugin-vue_export-helper.21dcd24c.js">
+    <link rel="modulepreload" href="/assets/Home.9d04e4bf.js">
+    <link rel="modulepreload" href="/assets/markdown-examples.md.3d47d5ba.lean.js">
+    <link rel="modulepreload" href="/assets/app.6610206e.js">
+    
+    <meta name="twitter:title" content="Markdown Extension Examples | 神金列表">
+  <meta property="og:title" content="Markdown Extension Examples | 神金列表">
+  </head>
+  <body>
+    <div id="app"><!--[--><div class="theme"><header class="nav-bar" data-v-5f148274><div class="sidebar-button" data-v-5f148274><svg class="icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z" class></path></svg></div><a class="nav-bar-title" href="/" aria-label="神金列表, back to home" data-v-5f148274 data-v-ffe79ce0><!----> 神金列表</a><div class="flex-grow" data-v-5f148274></div><div class="nav" data-v-5f148274><nav class="nav-links" data-v-5f148274 data-v-cb3c3c20><!--[--><div class="item" data-v-cb3c3c20><div class="nav-link" data-v-cb3c3c20 data-v-3db34c6b><a class="item" href="/" data-v-3db34c6b>主页 <!----></a></div></div><div class="item" data-v-cb3c3c20><div class="nav-link" data-v-cb3c3c20 data-v-3db34c6b><a class="item" href="/start" data-v-3db34c6b>介绍 <!----></a></div></div><!--]--><!----><!----></nav></div><!--[--><!--]--></header><aside class="sidebar" data-v-26a24d06><nav class="nav-links nav" data-v-26a24d06 data-v-cb3c3c20><!--[--><div class="item" data-v-cb3c3c20><div class="nav-link" data-v-cb3c3c20 data-v-3db34c6b><a class="item" href="/" data-v-3db34c6b>主页 <!----></a></div></div><div class="item" data-v-cb3c3c20><div class="nav-link" data-v-cb3c3c20 data-v-3db34c6b><a class="item" href="/start" data-v-3db34c6b>介绍 <!----></a></div></div><!--]--><!----><!----></nav><!--[--><!--]--><ul class="sidebar-links" data-v-26a24d06><!--[--><li class="sidebar-link"><p class="sidebar-link-item">神金列表</p><!----></li><!--]--></ul><!--[--><!--]--></aside><div class="sidebar-mask"></div><main class="page" data-v-34edaeb5><div class="container" data-v-34edaeb5><!--[--><!--]--><div style="position:relative;" class="content" data-v-34edaeb5><div><h1 id="markdown-extension-examples" tabindex="-1">Markdown Extension Examples <a class="header-anchor" href="#markdown-extension-examples" aria-hidden="true">#</a></h1><p>This page demonstrates some of the built-in markdown extensions provided by VitePress.</p><h2 id="syntax-highlighting" tabindex="-1">Syntax Highlighting <a class="header-anchor" href="#syntax-highlighting" aria-hidden="true">#</a></h2><p>VitePress provides Syntax Highlighting powered by <a href="https://github.com/shikijs/shiki" target="_blank" rel="noopener noreferrer">Shiki</a>, with additional features like line-highlighting:</p><p><strong>Input</strong></p><div class="language-md"><pre><code><span class="token code"><span class="token punctuation">```</span><span class="token code-language">js{4}</span>
+<span class="token code-block language-js"><span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  <span class="token function">data</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span>
+      <span class="token literal-property property">msg</span><span class="token operator">:</span> <span class="token string">&#39;Highlighted!&#39;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></span>
+<span class="token punctuation">```</span></span>
+</code></pre></div><p><strong>Output</strong></p><div class="language-js"><div class="highlight-lines"><br><br><br><div class="highlighted"> </div><br><br><br><br></div><pre><code><span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  <span class="token function">data</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span>
+      <span class="token literal-property property">msg</span><span class="token operator">:</span> <span class="token string">&#39;Highlighted!&#39;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="custom-containers" tabindex="-1">Custom Containers <a class="header-anchor" href="#custom-containers" aria-hidden="true">#</a></h2><p><strong>Input</strong></p><div class="language-md"><pre><code>::: info
+This is an info box.
+:::
+
+::: tip
+This is a tip.
+:::
+
+::: warning
+This is a warning.
+:::
+
+::: danger
+This is a dangerous warning.
+:::
+
+::: details
+This is a details block.
+:::
+</code></pre></div><p><strong>Output</strong></p><div class="info custom-block"><p class="custom-block-title">INFO</p><p>This is an info box.</p></div><div class="tip custom-block"><p class="custom-block-title">TIP</p><p>This is a tip.</p></div><div class="warning custom-block"><p class="custom-block-title">WARNING</p><p>This is a warning.</p></div><div class="danger custom-block"><p class="custom-block-title">WARNING</p><p>This is a dangerous warning.</p></div><p>::: details This is a details block. :::</p><h2 id="more" tabindex="-1">More <a class="header-anchor" href="#more" aria-hidden="true">#</a></h2><p>Check out the documentation for the <a href="https://vitepress.dev/guide/markdown" target="_blank" rel="noopener noreferrer">full list of markdown extensions</a>.</p></div></div><footer class="page-footer" data-v-34edaeb5 data-v-bf585664><div class="edit" data-v-bf585664><div class="edit-link" data-v-bf585664 data-v-778667f4><!----></div></div><div class="updated" data-v-bf585664><!----></div></footer><!----><!--[--><!--]--></div></main></div><!----><!--]--></div>
+    <script>__VP_HASH_MAP__ = JSON.parse("{\"readme.md\":\"4dbef649\",\"api-examples.md\":\"d437c46c\",\"index.md\":\"9a3452c2\",\"markdown-examples.md\":\"3d47d5ba\",\"start.md\":\"b2307150\",\"xiao-ji-xiang-jiao.md\":\"699bb234\"}")</script>
+    <script type="module" async src="/assets/app.6610206e.js"></script>
+    
+  </body>
+</html>
