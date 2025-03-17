@@ -1,0 +1,1 @@
+import{_ as e,c as t,o as r,ae as o}from"./chunks/framework.tuuL-SzM.js";const u=JSON.parse('{"title":"迎接人类的智慧！","description":"","frontmatter":{},"headers":[],"relativePath":"start.md","filePath":"start.md"}'),i={name:"start.md"};function l(n,a,s,h,c,d){return r(),t("div",null,a[0]||(a[0]=[o("",6)]))}const m=e(i,[["render",l]]);export{u as __pageData,m as default};

@@ -1,0 +1,1 @@
+import{_ as a,c as e,o as i}from"./chunks/framework.tuuL-SzM.js";const x=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"xiao-ji-xiang-jiao.md","filePath":"xiao-ji-xiang-jiao.md"}'),o={name:"xiao-ji-xiang-jiao.md"};function t(n,r,s,c,p,_){return i(),e("div")}const m=a(o,[["render",t]]);export{x as __pageData,m as default};
