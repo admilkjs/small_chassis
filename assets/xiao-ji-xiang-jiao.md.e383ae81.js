@@ -1,0 +1,1 @@
+import{_ as t}from"./plugin-vue_export-helper.21dcd24c.js";import{p as a,q as e}from"./framework.44a1938f.js";const m='{"title":"","description":"","frontmatter":{},"relativePath":"xiao-ji-xiang-jiao.md","lastUpdated":1742219533661}',o={};function r(i,n,s,c,p,_){return a(),e("div")}var l=t(o,[["render",r]]);export{m as __pageData,l as default};
